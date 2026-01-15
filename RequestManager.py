@@ -41,7 +41,7 @@ class RequestManager:
         while True:
             self.date = input("Enter a date in the following format: YYYY-MM-DD: ")
             try:
-                test = Time(f"{self.date} 00:00:00")
+                Time(f"{self.date} 00:00:00")
             except ValueError:
                 print(colored("That input is not valid.", "red"))
                 continue

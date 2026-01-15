@@ -1,25 +1,22 @@
 import astropy.units as u
 from astropy.coordinates import EarthLocation
-from termcolor import colored
 from RequestManager import RequestManager
+from UserInfo import UserInfo
 
 '''
     CREATED BY: BEVERLY BIALKE
     CREATED ON: 29 JUNE 2025
                             '''
 
+uinfo = UserInfo()
 
-#USER INFO HERE:
-#Hour difference compared to UTC - Google this
-offset = 0
+data = uinfo.get_info()
 
-#Latitude, Longitude, and Elevation of location - Google this
-latitude = 0 #degrees North
-longitude = 0 #degrees East
-altitude = 0 #meters above sea level
+latitude = float(data['latitude'])
+longitude = float(data['longitude'])
+altitude = float(data['altitude'])
+offset = float(data['offset'])
 
-
-#Nothing below needs to be edited
 location = EarthLocation(lat=latitude*u.deg, lon=longitude*u.deg, height=altitude*u.m)
 
 rm = RequestManager(offset, location)
