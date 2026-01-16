@@ -6,6 +6,7 @@
 - Supports multiple and single target plotting modes
 - Includes a moon luminance bar
 - Contains editable preset lists of targets
+- Now creates a user location preset upon first use
   
 The targets shown for "multiple" plots are dependent on the season the input month falls into.
 
@@ -22,20 +23,14 @@ To install these dependencies, run the following command in a console:
 *pip install astropy ephem numpy matplotlib termcolor*
 
 ## To Run
-Open the Main file and input your:
-- latitude
-- longitude
-- altitude
-- UTC offset
+Simply run the main file and answer the prompts for plotting style and date.
 
-into the provided variables. 
-
-Then, simply run the main file and answer the prompts. 
+If this is your first time running the program, you will be prompted to enter information about your location to allow accurate tracking of altitudes. After this, your preset will be saved for future use.
 
 ### Customizing Targets
 To change the targets plotted for each season, edit the TargetLogic file and input the names of the desired objects. 
 
-*By default, the targets are high-altitude objects in the northern hemisphere.*
+*By default, the targets are high-altitude objects in the northern hemisphere. Targets are sorted for Multiple plots based on season, so you may need to alter which targets appear for which season.*
 
 ## Example Plot
 Below is the "multiple" target plot for 2 December 2025.
